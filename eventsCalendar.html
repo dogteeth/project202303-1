@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .decadesEvents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.2rem;
+      }
+
+      .flagInParagraph {
+        float: left;
+        padding-right: 0.5rem;
+        width: 6rem;
+      }
+
+      .eventBookCover {
+        float: left;
+        padding-top: 0.5rem;
+        padding-right: 0.6rem;
+        width: 4rem;
+      }
+
+      /* new */
+      .event {
+        border-radius: 0.5rem;
+        max-width: 250px;
+        /* min-height: 100px; */
+        margin: 0.2rem;
+        padding: 0.8rem 1rem 2rem 1rem;
+        background-color: rgba(111, 110, 110, 0.5);
+        flex-grow: 1;
+      }
+      .event p {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        text-align: justify;
+        font-size: 1.6rem;
+      }
+
+      .event.yearTag {
+        border: grey solid 0.2rem;
+        flex-grow: 0;
+        width: 13rem;
+      }
+      .event.yearTag p {
+        color: white;
+        text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 1);
+        font-size: 4.5rem;
+        font-weight: 900;
+        text-align: center;
+      }
+
+      .event a {
+        text-decoration: underline;
+        color: inherit;
+      }
+
+      .event.mainEvent {
+        font-weight: 900;
+        color: white;
+        background-color: rgba(111, 110, 110, 0.8);
+      }
+
+      .event.specialEvent {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .olympics {
+      }
+
+      .trojanHorse {
+        width: 50%;
+        padding: 1rem;
+        align-self: center;
+        filter: drop-shadow(5px 10px 10px grey);
+      }
+
+      .trojanHorse:hover {
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.5s; /* When the animation is finished, start again */
+        animation-iteration-count: infinite;
+      }
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+
+      .companyLogo {
+        width: 80%;
+        align-self: center;
+        transform: rotate(-10deg);
+        box-shadow: 2px 2px 5px black;
+      }
+      .companyLogo:hover {
+        animation: rotateSelf 0.5s;
+      }
+
+      @keyframes rotateSelf {
+        0% {
+          transform: rotate(10deg);
+        }
+      }
+
+      .torii {
+        width: 80%;
+        align-self: center;
+      }
+
+      /* .marvelLogo:hover {
+        animation: scaleSelf 0.5s;
+      }
+
+      @keyframes scaleSelf {
+        100% {
+          transform: scale(2000%);
+          opacity: 0;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="section03">
+      <h1>在裕仁天皇路上的重點事件</h1>
+      <div class="decadesEvents">
+        <!--  -->
+        <!-- 1921 -->
+        <div class="event yearTag"><p>1921</p></div>
+        <div class="event"><p>大正因病，由裕仁親王擔任攝政宮。</p></div>
+        <div class="event">
+          <p>
+            林獻堂等人成立【
+            <a
+              href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E6%96%87%E5%8C%96%E5%8D%94%E6%9C%83"
+              target="_blank"
+              >台灣文化協會</a
+            >】，以消除內台差別，台灣自治為訴求。
+          </p>
+        </div>
+
+        <!-- 1922 -->
+        <div class="event yearTag"><p>1922</p></div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            被譽為二十世紀最偉大的長篇小說《<a
+              href="https://www.taaze.tw/products/11100998891.html"
+              target="_blank"
+              >尤利西斯</a
+            >》出版上市。
+          </p>
+        </div>
+        <div class="event"><p>日本共產黨成立。</p></div>
+        <div class="event specialEvent">
+          <p>
+            台灣縱貫鐵路<a
+              href="https://zh.wikipedia.org/zh-tw/海岸線_(臺鐵)"
+              target="_blank"
+              >海岸線</a
+            >全線通車。
+          </p>
+        </div>
+        <div class="event"><p>鄂圖曼土耳其帝國滅亡。</p></div>
+        <div class="event">
+          <p>蘇維埃社會主義共和國聯盟成立，進入蘇聯時代。</p>
+        </div>
+
+        <!-- 1923 -->
+        <div class="event yearTag"><p>1923</p></div>
+        <div class="event specialEvent">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/李登輝" target="_blank"
+              >李登輝</a
+            >出生。
+          </p>
+          <img src="img/trojanHorse.png" class="trojanHorse" alt="" />
+        </div>
+        <div class="event mainEvent">
+          <p>
+            <img src="img/royalFlag.png" class="flagInParagraph" />【<a
+              href="https://zh.wikipedia.org/wiki/臺灣行啟"
+              target="_blank"
+              >台灣行啟</a
+            >】:裕仁皇太子開始12日的訪台行程。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/內田嘉吉" target="_blank"
+              >內田嘉吉</a
+            >就任第九任台灣總督。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/%E8%94%A3%E6%B8%AD%E6%B0%B4"
+              target="_blank"
+              >蔣渭水</a
+            >，<a
+              href="https://zh.wikipedia.org/zh-tw/%E8%94%A1%E5%9F%B9%E7%81%AB"
+              >蔡培火</a
+            >因違反治安警察法，被判四個月監禁。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/關東大地震" target="_blank"
+              >關東大地震</a
+            >：8.1級的地震，造成10萬人死亡，4萬人失踪。
+          </p>
+        </div>
+
+        <!-- 1924 -->
+        <div class="event yearTag"><p>1924</p></div>
+        <div class="event">
+          <p>
+            末代皇帝<a
+              href="https://zh.wikipedia.org/zh-tw/%E6%BA%A5%E5%84%80"
+              traget="_blank"
+              >溥儀</a
+            >被逐出紫禁城。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <img
+              src="img/book.png"
+              class="eventBookCover"
+              alt=""
+            />影響了20年代文藝發展的《
+            <a
+              href="https://www.taaze.tw/products/11100921181.html"
+              target="_blank"
+              >超現實主義宣言</a
+            >》首次發表。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            E. M. 佛斯特的《<a
+              href="https://www.taaze.tw/products/11100824183.html"
+              target="_blank"
+              >印度之旅</a
+            >》出版上市。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/伊澤多喜男" target="_blank"
+              >伊澤多喜男</a
+            >就任第十任台灣總督。
+          </p>
+        </div>
+
+        <!-- 1925 -->
+        <div class="event yearTag"><p>1925</p></div>
+        <div class="event">
+          <p>台灣青果株式會社成立，負責香蕉鳯梨橘子等生鮮水果出口。</p>
+        </div>
+        <div class="event">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/%E5%AD%AB%E4%B8%AD%E5%B1%B1"
+              target="_blank"
+              >孫中山</a
+            >因肝癌於北京逝世。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            日本全國施行【治安維持法】：禁止改變國體，禁止否定私有財產制的結社及政治運動（針對共產主義）。
+          </p>
+        </div>
+        <div class="event"><p>NHK開始放送。</p></div>
+
+        <!-- 1926 -->
+        <div class="event yearTag"><p>1926</p></div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            <a
+              href="https://www.taaze.tw/rwd_searchResult.html?keyType%5B%5D=0&keyword%5B%5D=賴和"
+              target="_blank"
+              >賴和</a
+            >開始發表白話文小說。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>花蓮到台東的鐵路全線開通儀式，於花蓮玉里舉行。</p>
+        </div>
+
+        <div class="event">
+          <p>
+            末永仁與磯永吉研發的新品種米【<a
+              href="https://zh.m.wikipedia.org/zh-tw/%E8%93%AC%E8%90%8A%E7%B1%B3"
+              target="_blank"
+              >蓬萊米</a
+            >】正式發表問世。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            文化書局於新竹太原路成立。由蔣渭水經營，以進口文化、思潮相關書籍為主。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/上山滿之進" target="_blank"
+              >上山滿之進</a
+            >就任第十一任台灣總督。
+          </p>
+        </div>
+
+        <div class="event mainEvent">
+          <p>
+            <img
+              src="img/royalFlag.png"
+              class="flagInParagraph"
+            />大正病逝，裕仁繼任天皇，改年號為【昭和】。
+          </p>
+        </div>
+
+        <!-- 1927 -->
+        <div class="event yearTag"><p>1927</p></div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            德國哲學家海德格爾出版《<a
+              href="https://www.taaze.tw/products/11100591543.html"
+              target="_blank"
+              >存在與時間</a
+            >》影響20世紀的哲學發展，如存在主義、解構主義。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            首家<a
+              href="https://zh.m.wikipedia.org/zh-tw/%E7%B4%80%E4%BC%8A%E5%9C%8B%E5%B1%8B%E6%9B%B8%E5%BA%97"
+              target="_blank"
+              >紀伊國屋書店</a
+            >於東京新宿開幕。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/中央書局" target="_blank"
+              >中央書局</a
+            >於台中市成立。由林獻堂等人所成立的台灣文化協會推動，為當時資金與規模最大的書店。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/昭和金融恐慌"
+              >昭和金融恐慌</a
+            >：1923年關東大地震導致銀行產生龐大的呆帳，中小銀行因不景氣影響導致經營狀態惡化，社會因此產生金融危機。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            第一部有聲電影
+            <a href="https://zh.wikipedia.org/zh-tw/爵士歌手">爵士歌手</a>問世。
+          </p>
+        </div>
+
+        <!-- 1928 -->
+        <div class="event yearTag"><p>1928</p></div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/臺北帝國大學"
+              >台北帝國大學</a
+            >成立。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/川村竹治" target="_blank"
+              >川村竹治</a
+            >就任第十二任台灣總督。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-hant/%E5%BB%BA%E5%8A%9F%E7%A5%9E%E7%A4%BE"
+              target="_blank"
+              >建功神社</a
+            >（今台灣藝術教育館，位於台北植物園內）完工。為了祭祀因公殉職的招魂社，也有台灣的靖國神社之稱。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            霧峰林家的林獻堂完成環球世界378天之後，出版《<a
+              href="https://www.taaze.tw/products/11100872327.html"
+              target="_blank"
+              >環球世界</a
+            >》。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <img
+              src="img/book.png"
+              class="eventBookCover"
+              alt=""
+            />徐志摩代表作《<a
+              href="https://www.taaze.tw/rwd_searchResult.html?keyType%5B%5D=0&keyword%5B%5D=%E5%86%8D%E5%88%A5%E5%BA%B7%E6%A9%8B&prodKind=0&prodCatId=0&catId=0&saleDiscStart=0&saleDiscEnd=0&salePriceStart=&salePriceEnd=&publishDateStart=&publishDateEnd=&prodRank=0&addMarkFlg=0&force=0&catFocus=11&orgFocus=A&catNmFocus=010000000000&layout=A&nowPage=1&sort="
+              target="_blank"
+              >再別康橋</a
+            >》出版上市。
+          </p>
+        </div>
+
+        <!-- 1929 -->
+        <div class="event yearTag"><p>1929</p></div>
+
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/石塚英藏" target="_blank"
+              >石塚英藏</a
+            >就任第十三任台灣總督，隔年十月發生霧社事件，因而辭職。
+          </p>
+        </div>
+
+        <div class="event"><p>美國股市崩盤，造成全球經濟大蕭條。</p></div>
+        <div class="event">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/%E8%87%BA%E5%8C%97%E4%BA%8C%E4%BA%8C%E5%85%AB%E7%B4%80%E5%BF%B5%E9%A4%A8"
+              target="_blank"
+              >台北放送局</a
+            >完工，開始放送。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            嘉南大圳完工。八田與一設計，為當時東洋最大的埤圳建設。完工後，嘉南平原水田成長30倍，總產量增加4倍，60萬的農民受益。
+          </p>
+        </div>
+
+        <!-- 1930 -->
+        <div class="event yearTag"><p>1930</p></div>
+        <div class="event">
+          <p>
+            【台灣地方自治聯盟】成立大會，由林獻堂召集，以促進台灣地方自治制度為目標。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            《<a
+              href="https://zh.wikipedia.org/wiki/%E4%B8%89%E5%85%AD%E4%B9%9D%E5%B0%8F%E5%A0%B1"
+              target="_blank"
+              >三六九小報</a
+            >》創刊。每年三月六月九月出刊。以白話文、台灣話文，以歷史與詩為主要內容。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/wiki/%E6%A8%82%E7%94%9F%E7%99%82%E9%A4%8A%E9%99%A2%E8%88%8A%E9%99%A2%E5%8D%80"
+              target="_blank"
+              >臺灣總督府癩療養所樂生院</a
+            >（衛福部樂生療養院）落成。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/霧社事件" target="_blank"
+              >霧社事件</a
+            >：賽德克族原住民不滿日本統治當局的統治，趁霧社小學校舉行運動會時襲擊日本人。
+          </p>
+        </div>
+
+        <!-- 1931 -->
+        <div class="event yearTag"><p>1931</p></div>
+        <div class="event">
+          <p>東京台北飛機首航，途經福岡與沖繩，花了十六小時。</p>
+        </div>
+        <div class="event">
+          <p>
+            日本於東北發動九一八事變，因鐵路發生爆炸，日軍以保護自身權益為由，出兵滿州。同年11月底，佔領整個東北地區。
+          </p>
+        </div>
+
+        <!-- 1932 -->
+        <div class="event yearTag"><p>1932</p></div>
+        <div class="event">
+          <p>
+            《<a
+              href="https://zh.wikipedia.org/wiki/%E5%8D%97%E9%9F%B3_(%E9%9B%9C%E8%AA%8C)"
+              target="_blank"
+              >南音雜誌</a
+            >》創刊。以白話文出版的文學刊物。由莊垂勝，賴和等人，於台中創辦。葉石濤，稱之為「台灣文學史上最有份量的一本文藝雜誌。」
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/中川健藏" target="_blank"
+              >中川健藏</a
+            >就任第十六任的台灣總督。
+          </p>
+        </div>
+        <div class="event specialEvent">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/1932%E5%B9%B4%E5%A4%8F%E5%AD%A3%E5%A5%A7%E6%9E%97%E5%8C%B9%E5%85%8B%E9%81%8B%E5%8B%95%E6%9C%83"
+              target="_blank"
+              >第十屆奧運</a
+            >於洛杉磯舉辦，張星賢代表日本參加男子400公尺中欄，獲得第四名。為第一位參加奧運的台灣人。
+          </p>
+          <img src="img/olympics.png" class="olympics" alt="" />
+        </div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/南弘" target="_blank">南弘</a
+            >就任第十五任的台灣總督。日本發生【<a
+              href="https://zh.m.wikipedia.org/zh-tw/%E4%BA%94%E4%B8%80%E4%BA%94%E4%BA%8B%E4%BB%B6"
+              target="_blank"
+              >五一五事變</a
+            >】，內閣改組，南強僅就任兩個月的總督後，即辭卸總督，入閣擔任遞信大臣。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            滿州國1932年3月9日在長春成立，以清遜帝溥儀為執政，年號大同。同年9月和日本政府簽訂《日滿議定書》，日本承認了滿州國的合法性。
+          </p>
+        </div>
+
+        <!-- 1933 -->
+        <div class="event yearTag"><p>1933</p></div>
+
+        <div class="event specialEvent">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/%E5%8F%A4%E5%80%AB%E7%BE%8E%E4%BA%9E%E5%94%B1%E7%89%87"
+              target="_blank"
+              >古倫美亞唱片公司</a
+            >推出台語唱片《望春風》、《雨夜花》，由純純主唱。
+          </p>
+          <img src="img/companyLogo.jpg" class="companyLogo" alt="" />
+        </div>
+        <div class="event">
+          <p>台灣米在大阪掛版上市。台灣米出口量佔總產值的50%。</p>
+        </div>
+        <div class="event">
+          <p>
+            希特勒受任為德國總理，納粹黨宣布其他政黨為非法組織，清除國內政治反對力量。
+          </p>
+        </div>
+        <div class="event">
+          <p>
+            國際聯盟（聯合國的前身），認定滿州是侵略戰爭，日本是侵略國家。三月底日本宣布退出國際聯盟。
+          </p>
+        </div>
+
+        <div class="event yearTag"><p>1934</p></div>
+        <div class="event"><p>日月潭水力發電所完工運行。</p></div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/臺陽美術協會" target="_blank"
+              >台陽美術協會</a
+            >成立。廖繼春、顏水龍、陳澄波等人，於台北成立。開敫了台灣新美術運動。
+          </p>
+        </div>
+        <div class="event"><p>美國大聯盟組成明星隊到日本訪問。</p></div>
+
+        <!-- 1935 -->
+        <div class="event yearTag"><p>1935</p></div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            川端康成於報章雜誌首次發表《<a
+              href="https://www.taaze.tw/products/11100999833.html"
+              target="_blank"
+              >雪國</a
+            >》。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            台灣發生規模六級的地震，震央在台中東勢附近，上千戶房屋受損，災民達20萬。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            台灣合同鳯梨株式會社成立（戰後改為台灣鳯梨公司以台鳯牌鳯梨罐頭為名），合併眾多罐頭工
+          </p>
+        </div>
+
+        <div class="event"><p>台北松山機場完工。</p></div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            慶祝始政40年，舉辦為期50天的<a
+              href="https://www.taaze.tw/products/11100839103.html"
+              target="_blank"
+              >台灣博覽會</a
+            >。開幕式出席政要各界人士達三千人。參展品目達30萬件，海內外參觀人數總次達兩百七十六萬人次。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            1935年庄協議會由全面官派改制為半官派半民選，當年11月22日台灣舉行第一場選舉。
+          </p>
+        </div>
+        <div class="event"><p>日本NHK開始海外廣播。</p></div>
+
+        <div class="event yearTag"><p>1936</p></div>
+        <div class="event"><p>台北福岡、台北大阪航空航線正式運營。</p></div>
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/小林躋造" target="_blank"
+              >小林躋造</a
+            >就任第十七任台灣總督。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/二二六事件" target="_blank"
+              >二二六事變</a
+            >：日本近代史上最大的一次叛亂行動，數位軍官帶領士兵，對政府官員進行刺殺。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            日德簽訂【反共產國際協議】，反對蘇聯與共產國際（以共產黨、共產主義所組織的國際聯盟）。義大利於1939年加入。軸心國的雛形逐漸形成。
+          </p>
+        </div>
+
+        <div class="event yearTag"><p>1937</p></div>
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            史坦貝克《<a
+              href="https://www.taaze.tw/products/11100939094.html"
+              target="_blank"
+              >人鼠之間</a
+            >》出版上市。
+          </p>
+        </div>
+        <div class="event"><p>盧溝橋事件：中日戰爭全面開打。</p></div>
+        <div class="event yearTag"><p>1938</p></div>
+        <div class="event specialEvent">
+          <p>台灣總督為了推廣皇民化，公佈【一庄街一寺廟】方針。</p>
+          <img src="img/torii.png" class="torii" alt="" />
+        </div>
+        <div class="event">
+          <p>
+            <a
+              href="https://zh.wikipedia.org/zh-tw/%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%85%92%E7%AB%A5%E6%96%B0%E6%A8%82%E5%9C%92"
+              target="_blank"
+              >台北圓山兒童樂園</a
+            >開幕。此為台灣第一座，也是當時唯一一座超大型遊樂園區。
+          </p>
+        </div>
+
+        <!-- 1939 -->
+        <div class="event yearTag"><p>1939</p></div>
+
+        <div class="event specialEvent">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/漫威漫畫">漫威漫畫</a
+            >創刊號上市。
+          </p>
+          <img src="img/marvel.png" class="marvelLogo" alt="" />
+        </div>
+
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            雷蒙．錢德勒以私家偵探馬羅做為主要的小說《<a
+              href="https://www.taaze.tw/products/11100210759.html"
+              target="_blank"
+              >大眠</a
+            >》上市。
+          </p>
+        </div>
+
+        <div class="event">
+          <p>
+            東沙島，太平島納入高雄州。東沙島附近是全世界船難最多的地方之一。
+          </p>
+        </div>
+
+        <div class="event"><p>希特勒入侵波蘭，引發第二次世界大戰。</p></div>
+
+        <div class="event yearTag">
+          <p>1940</p>
+        </div>
+
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/wiki/長谷川清" target="_blank"
+              >長谷川清</a
+            >任第十八任台灣總督
+          </p>
+        </div>
+
+        <div class="event">
+          <p>東京原訂舉辦第十二屆奧運，因第二次世界大戰停辦。</p>
+        </div>
+
+        <div class="event">
+          <p>日德義三國聯盟。</p>
+        </div>
+
+        <div class="event yearTag"><p>1941</p></div>
+
+        <div class="event">
+          <p>
+            嘉義發生規模7.1級大地震。雲嘉南地區上萬戶的房子倒塌，約一千人傷亡。
+          </p>
+        </div>
+
+        <div class="event"><p>日本偷襲珍珠港，太平洋戰爭爆發。</p></div>
+        <div class="event yearTag"><p>1942</p></div>
+
+        <div class="event">
+          <p>
+            【<a
+              href="https://zh.wikipedia.org/zh-tw/曼哈頓計劃"
+              target="_blank"
+              >曼哈頓計劃</a
+            >】啟動，由美國主導，研發核能武器。自此各國展開核武器競爭。但美國至今仍是唯一發動核彈攻擊的國家。
+          </p>
+        </div>
+
+        <div class="event yearTag">
+          <p>1943</p>
+        </div>
+
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            《<a
+              href="https://www.taaze.tw/products/11100617114.html"
+              target="_blank"
+              >存在與虛無</a
+            >》出版上市。沙特的第一本著作，也是存在主義思潮最重要的一本作品。
+          </p>
+        </div>
+
+        <div class="event specialEvent">
+          <p>美軍對新竹航空區域展開轟炸。</p>
+          <img src="img/bombs.png" class="bombs" alt="" />
+        </div>
+
+        <div class="event yearTag"><p>1944</p></div>
+
+        <div class="event specialEvent">
+          <p>美軍對台灣全島展開轟炸。</p>
+          <img src="img/bombs.png" class="bombs" alt="" />
+        </div>
+
+        <div class="event">
+          <p>
+            <a href="https://zh.wikipedia.org/zh-tw/安藤利吉" target="_blank"
+              >安藤利吉</a
+            >任第十九任台灣總督。日本無條件投降後，安藤以戰犯的身份遭到逮捕，押送上海拘禁。1946年4月29日於窂裹服毒自殺身亡。
+          </p>
+        </div>
+
+        <div class="event yearTag"><p>1945</p></div>
+
+        <div class="event specialEvent">
+          <p>美軍再度對台北、台中、嘉義展開轟炸。</p>
+          <img src="img/bombs.png" class="bombs" alt="" />
+        </div>
+
+        <div class="event">
+          <p>
+            <img src="img/book.png" class="eventBookCover" alt="" />《<a
+              href="https://www.taaze.tw/products/11100199714.html"
+              target="_blank"
+              >亞細亞的孤兒</a
+            >》完稿，吳濁流筆下描述台灣人在台灣受到日本殖民者的侵壓，到中國後又被當成日本人間諜的故事。
+          </p>
+        </div>
+
+        <div class="event specialEvent">
+          <p>
+            美軍120架轟炸機，以編隊的方式，再次對台北展開轟炸。總督府、總督官邸、台灣銀行，建功神社等，都遭到毀損。
+          </p>
+          <img src="img/bombs.png" class="bombs" alt="" />
+        </div>
+
+        <div class="event">
+          <p>
+            美軍於廣島、長崎投下原子彈，造成25萬人死亡。日本宣布無條件投降。
+          </p>
+        </div>
+        x
+      </div>
+    </div>
+  </body>
+</html>

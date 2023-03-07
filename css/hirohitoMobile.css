@@ -1,0 +1,409 @@
+@import "hirohitoVariable.css";
+
+
+/* 首頁大圖 */
+.mainBanner {
+    width: 100%;
+    min-height: 700px;
+    height: 100vh;
+    background-color: var(--backgroundGrey);
+    position: relative;
+    overflow: hidden;
+}
+
+.bannerImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.mainBackgroundSun {
+    object-position: right;
+}
+
+
+.geishia {
+    display: none;
+}
+
+.mainBannerNews {
+    object-position: left;
+}
+
+.mainBannerText {
+    object-position: left;
+    display: none;
+}
+
+.mainBannerText_mobile {
+    object-fit: contain;
+    padding: 3rem;
+}
+
+/* Section01 裕仁行的簡述  */
+
+.section01Container {
+    margin: 1rem 0.5rem 0rem 0.5rem;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section01Banner {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--backgroundTransparentBlack);
+    border-radius: 2rem;
+    max-width: 700px;
+    position: relative;
+    box-shadow: var(--boxShadow);
+}
+
+.section01BannerImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    overflow-y: visible;
+    -webkit-overflow-y: visible;
+    border-radius: 2rem;
+}
+
+.section01BannerImgBackground {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+
+.section01CatchLine {
+    text-align: justify;
+    font-size: var(--mainTextSize);
+    margin: 2rem 1rem 0rem 1rem;
+    align-self: center;
+    line-height: var(--lineHeight);
+}
+
+/* video setup */
+.videoUnoContainer {
+    width: 100%;
+    /* gap: 1rem;*/
+    /* padding: 1rem 1rem 0rem 1rem; */
+    padding: 0.2rem;
+}
+
+.youtubeVideoContainer {
+    /* margin-top: 1rem; */
+    width: 100%;
+    /* gap: 1rem;*/
+    /* padding: 1rem 1rem 0rem 1rem; */
+    padding: 0.2rem;
+}
+
+
+
+.youtubeEmbeded {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.youtubeEmbeded iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+/* 東宮行啟主影片與書籍 */
+.videoUnoContainer {
+    padding: 1rem 0rem 2rem 0rem;
+    margin-bottom: 1rem;
+    background-image: url(../img/1920_1080_wallpaper_01.png);
+    color: white;
+}
+
+.youtubeAdded {
+    margin-top: 1rem;
+}
+
+.unitTwo {
+    background-color: grey;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+    border-radius: 1rem;
+}
+
+/* section01Sub setup  */
+
+.videoUnoSupplement .youtubeEmbeded {
+    border: 0.5rem red solid;
+    border-radius: 1rem;
+}
+
+
+.section01Sub .bookCoverImg {
+    width: 80%;
+    max-height: 50vh;
+    object-fit: contain;
+    display: block;
+    margin: 2rem auto 1rem;
+
+}
+
+.section01Sub .youtubeContentDescription {
+    margin-top: 0rem;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.section01Sub .bookText {
+    padding: 0.5rem 1rem 0rem 1rem;
+}
+
+/* section03 */
+
+.section03 {
+    background-image: url(../img/1920_1080_wallpaper_01.png);
+}
+
+.pastAndPresentBanner {
+    display: none;
+}
+
+.section03BannerMobile {
+    border-top: black solid 1rem;
+    border-bottom: black solid 1rem;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: top right;
+
+}
+
+.pastAndPresentDescription {
+    color: white;
+    padding: 1rem;
+}
+
+.booksCuatroModule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: grey;
+}
+
+.booksCuatroModule .bookCoverImg {
+    width: 90%;
+    display: block;
+    margin: auto;
+
+}
+
+.booksCuatroModule .bookText {
+    margin-top: 1rem;
+}
+
+/* 卡片區 */
+
+.cardsContainer {
+    padding: 1rem;
+}
+
+.cardsDeck {
+    display: flex;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+
+.buildingNowAndThen {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    width: 300px;
+    min-width: 300px;
+    height: 60vh;
+    min-height: 450px;
+    max-height: 650px;
+    /* margin: auto; */
+    padding: 0.5rem;
+}
+
+.card__inner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    background-color: white;
+}
+
+.card__face--front {
+    background-image: linear-gradient(to bottom right,
+            var(--cardBKColor_c01) 50%,
+            var(--cardBKColor_c02) 100%);
+}
+
+.card__face--front .buildingNowAndThen {
+    border: var(--cardTransparentBackground_End) solid 2px;
+}
+
+.card__face--back .buildingNowAndThen {
+    border: black solid 2px;
+}
+
+.card__face--back {
+    background-image: linear-gradient(to bottom,
+            var(--cardBKColor_c03) 80%,
+            var(--cardBKColor_c04) 100%);
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card__face--front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.card__face--back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transform: rotateY(180deg);
+
+}
+
+.card__face--front h2,
+.card__face--back h2 {
+    margin: 0.2rem;
+}
+
+.section05 {
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.booksPromoHeader {
+    text-align: center;
+}
+
+.booksPromoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booksPromoSetContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.booksPromoSet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--coverAndTextBackground);
+    border-radius: 1rem;
+}
+
+.booksPromoSet h2 {
+    text-align: center;
+}
+
+.section05 .booksDuoSet {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.section05 .coverAndText {
+    display: flex;
+    flex-direction: column;
+    /* border: red solid 1px; */
+}
+
+.section05 .bookCoverImg {
+    width: 90%;
+    display: block;
+    margin: auto;
+
+}
+
+.section05 .bookText {
+    padding: 1rem;
+}
+
+/* small screen size 不顯示 */
+
+#divider01 {
+    display: none;
+}
+
+#divider02 {
+    display: none;
+}
+
+#divider03 {
+    display: none;
+}
+
+#divider04 {
+    display: none;
+}
+
+#divider05 {
+    display: none;
+}
+
+.section02 {
+    display: none;
+}
+
+.section04 {
+    display: none;
+}

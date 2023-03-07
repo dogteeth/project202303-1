@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .videoUnoContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        border: 5px red solid;
+      }
+      .youtubeEmbeded {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        flex-grow: 1;
+        border: 5px red solid;
+      }
+      .youtubeVideoContainer {
+        flex: 0 0 50%;
+      }
+
+      .youtubeEmbeded iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .youtubeContentDescription {
+        border: 5px red solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="videoUnoSupplement">
+      <div class="videoUnoContainer">
+        <div class="youtubeVideoContainer">
+          <div class="youtubeEmbeded">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/K9-Nfe7Mot0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="youtubeContentDescription">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+            quidem corrupti pariatur, vitae doloremque qui delectus quo
+            perferendis repudiandae adipisci sequi numquam eveniet suscipit
+            incidunt, dicta nesciunt, error obcaecati dolor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

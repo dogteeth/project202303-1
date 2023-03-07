@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: grey;
+        display: flex;
+      }
+      .select {
+        flex: 0 0 30%;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+      }
+      .showContent {
+        width: 100%;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .select {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.2rem;
+      }
+
+      .tripContent {
+        width: 100%;
+        height: 80vh;
+        /* background-color: blueviolet; */
+      }
+      .flag {
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5rem;
+      }
+      button:focus {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="select">
+        <button onclick="changeBKC(0)" id="btn btn1">btn01 Click here!</button>
+        <button onclick="changeBKC(1)" id="btn btn2">btn02 Click here!</button>
+        <button onclick="changeBKC(2)" id="btn btn3">btn03 Click here!</button>
+        <button id="btn btn4">btn04 Click here!</button>
+        <button id="btn btn5">btn05 Click here!</button>
+        <button id="btn btn6">btn06 Click here!</button>
+        <button id="btn btn7">btn07 Click here!</button>
+        <button id="btn btn8">btn08 Click here!</button>
+        <button id="btn btn9">btn09 Click here!</button>
+        <button id="btn btn10">btn10 Click here!</button>
+        <button id="btn btn11">btn11 Click here!</button>
+        <button id="btn btn12">btn12 Click here!</button>
+        <button id="btn btn13">btn13 Click here!</button>
+        <button id="btn btn14">btn14 Click here!</button>
+      </div>
+      <div class="showContent">
+        <div class="tripContent" id="tripBackground">
+          <img
+            src="img/mainBanner/1920_1080_background.png"
+            alt=""
+            class="flag"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      let backgroundArray = ['black', 'yellow', 'red'];
+      const target = document.getElementById('tripBackground');
+      function changeBKC(color) {
+        target.style.backgroundColor = backgroundArray[color];
+      }
+    </script>
+  </body>
+</html>

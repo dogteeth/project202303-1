@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      (function (d) {
+        var config = {
+            kitId: 'ajt0gvz',
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+          }, config.scriptTimeout),
+          tk = d.createElement('script'),
+          f = false,
+          s = d.getElementsByTagName('script')[0],
+          a;
+        h.className += ' wf-loading';
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != 'complete' && a != 'loaded')) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: serif;
+      }
+      .mainBanner {
+        width: 100%;
+        min-width: 900px;
+        min-height: 700px;
+        height: 100vh;
+        background-color: grey;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bannerImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .mainBackgroundSun,
+      .geishia {
+        object-position: right;
+      }
+
+      .section01 {
+        width: 70%;
+        height: 100vh;
+        min-height: 700px;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .section01Container {
+        height: 100vh;
+
+        min-height: 700px;
+        display: flex;
+      }
+
+      .section01Banner {
+        margin: 1rem;
+        flex: 0 0 50%;
+        /* border-bottom: red 0.8rem solid; */
+        /* border-right: red 0.2rem solid;
+        border-left: red 0.2rem solid; */
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 2rem;
+        max-width: 700px;
+        position: relative;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1);
+      }
+
+      .section01BannerImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+        overflow-y: visible;
+        -webkit-overflow-y: visible;
+        border-radius: 2rem;
+      }
+
+      .section01BannerImgBackground {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        border-radius: 2rem;
+        object-fit: cover;
+        min-height: 250px;
+      }
+
+      .section01CatchLine {
+        align-self: center;
+      }
+      .sun {
+        border-radius: 0%;
+      }
+
+      .divider {
+        width: 50%;
+        height: 20vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+      }
+      .dividerFlag {
+        width: 100px;
+        height: 100px;
+      }
+
+      .fontHirohito {
+        font-family: 'kozuka-gothic-pro', sans-serif;
+      }
+      .section02 {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        border: green 10px solid;
+      }
+      .sideBanner {
+        border: red solid 1px;
+        text-align: right;
+        flex: 0 0 15rem;
+        padding: auto;
+      }
+      .sideText {
+        writing-mode: vertical-rl;
+        font-weight: 900;
+        font-size: 10rem;
+        font-style: normal;
+        white-space: nowrap;
+      }
+      .itineraryText {
+        font-weight: 900;
+        font-size: 5rem;
+        font-style: normal;
+        white-space: nowrap;
+      }
+
+      .itineraryBannerText {
+        font-weight: 900;
+        font-size: 5rem;
+        font-style: normal;
+        white-space: nowrap;
+        color: white;
+        background-color: black;
+      }
+
+      .dayNumber {
+        background-color: rgba(111, 110, 110, 0.5);
+        font-size: 2rem;
+      }
+
+      .dayContent {
+        font-size: 1.5rem;
+      }
+
+      .dayContent span {
+        color: red;
+      }
+
+      .daysItineraryList {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .daysItineraryList ul {
+        list-style: none;
+      }
+
+      .daysItineraryListColumn01 {
+        flex: 0 0 50%;
+      }
+
+      /*  */
+      .decadesEvents {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .decadesEvents hr {
+        width: 100%;
+        border: none;
+      }
+      .events {
+        font-size: 1.5rem;
+        text-align: justify;
+        border-radius: 0.5rem;
+        max-width: 300px;
+        min-height: 200px;
+        margin: 0.2rem;
+        padding: 0.8rem 1rem 2rem 1rem;
+        background-color: rgba(111, 110, 110, 0.5);
+      }
+
+      .events.mainEvent {
+        font-weight: 900;
+        color: white;
+        background-color: rgba(111, 110, 110, 0.8);
+      }
+      .events a {
+        /* white-space: nowrap; */
+        text-decoration: underline;
+        color: inherit;
+      }
+      .events.yearTag {
+        color: white;
+        font-size: 5rem;
+        font-weight: 900;
+        background-color: rgba(111, 110, 110, 0.5);
+        text-align: center;
+      }
+      .flagInParagraph {
+        float: left;
+        padding-right: 0.5rem;
+        width: 6rem;
+      }
+
+      .eventBookCover {
+        float: left;
+        padding-right: 0.6rem;
+        width: 6rem;
+      }
+      .testbookcover {
+        width: 5rem;
+      }
+
+      .spanTest {
+        border: red solid 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainBody">
+      <div class="mainBanner">
+        <img
+          src="img/mainBanner/1920_1080_background.png"
+          alt=""
+          class="mainBackgroundSun bannerImg"
+        />
+        <img
+          src="img/mainBanner/1920_1080_03.png"
+          alt=""
+          class="mainBannerNews bannerImg"
+        />
+
+        <img
+          src="img/mainBanner/1920_1080_02.png"
+          alt=""
+          class="geishia bannerImg scrollImg"
+        />
+
+        <img
+          src="img/mainBanner/1920_1080_01.png"
+          alt=""
+          class="geishia bannerImg"
+        />
+
+        <img
+          src="img/mainBanner/1920_1080_title.png"
+          alt=""
+          class="mainBannerText bannerImg scrollImgLeft"
+        />
+      </div>
+      <div class="divider">
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+      </div>
+      <div class="section01">
+        <div class="section01Container">
+          <div class="section01Banner">
+            <!-- <img
+              src="img/section01Banner/960_1080_main_banner_02_04.png"
+              alt=""
+              class="section01BannerImg sun"
+            /> -->
+            <img
+              src="img/section01Banner/960_1080_main_banner_02_03.png"
+              alt=""
+              class="section01BannerImg"
+            />
+            <img
+              src="img/section01Banner/960_1080_main_banner_02_02.png"
+              alt=""
+              class="section01BannerImg animated_hand"
+            />
+            <img
+              src="img/section01Banner/960_1080_main_banner_02_01.png"
+              alt=""
+              class="section01BannerImgBackground"
+            />
+          </div>
+          <div class="section01CatchLine">
+            <h1>
+              1923年4月16日，日本皇太子裕仁應時任臺灣總督田健治郎的邀請，搭乘軍艦「金剛」來臺灣訪問12天。
+              以臺灣總督府特造的台鐵花車作為長程陸路的交通工具，行程包括經由敕使街道到臺灣神社參拜，並遍及基隆、臺北、新竹、臺中、臺南、高雄、屏東、澎湖等地。皇太子裕仁遊訪臺灣除了巡視殖民成果，亦達到權力教化的意涵。
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="divider">
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+      </div>
+      <div class="section02">
+        <div class="sideBanner">
+          <h1 class="sideText fontHirohito">たいわんぎょうけい</h1>
+        </div>
+        <div class="mainItinerary">
+          <h1 class="itineraryText">太子不好當</h1>
+          <h1 class="itineraryText">12天行程滿滿滿</h1>
+          <h1 class="itineraryBannerText">訪台日程表</h1>
+          <div class="daysItineraryList">
+            <div class="daysItineraryListColumn01">
+              <div class="daysItinerary day00">
+                <div class="dayNumber">起程 - 4月12日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>08:20</span>東京車站出發，前往橫須賀軍港</p>
+                    </li>
+                    <li>
+                      <p>
+                        <span>09:55</span
+                        >抵達橫須賀軍港，搭船前往台灣。途經伊豆半島，和哥山的潮岬、高知縣的土佐灣水道、鹿兒島的佐多岬，再經由沖繩島，到台灣基隆。
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day01">
+                <div class="dayNumber">第一天 - 4月16日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p>
+                        <span>13:25</span>
+                        抵達基隆港，換乘火車，前往台北。在進入基隆港前，船支在澳底（貢寮）外海繞行一圈，遙拜北白川宮，能久親王。
+                      </p>
+                    </li>
+                    <li>
+                      <p><span>14:22</span>抵達台北、台北御泊所休憇。</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day02">
+                <div class="dayNumber">第二天 - 4月17日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>09:00</span>出發</p>
+                    </li>
+                    <li>
+                      <p><span>09:20</span>台灣神社參拜</p>
+                    </li>
+                    <li>
+                      <p><span>11:05</span>台灣總督府歡迎會</p>
+                    </li>
+                    <li>
+                      <p><span>13:20</span>台灣生產品展覽會參觀</p>
+                    </li>
+                    <li>
+                      <p><span>15:25</span> 總督府中央研究所農業部參觀</p>
+                    </li>
+                    <li>
+                      <p><span>17:00</span>台北御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day03">
+                <div class="dayNumber">第三天 - 4月18日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>09:00</span>出發</p>
+                    </li>
+                    <li>
+                      <p><span>09:05</span> 總督府中央研究所參觀</p>
+                    </li>
+                    <li>
+                      <p><span>10:20</span>台北師範學校及附屬小學參觀</p>
+                    </li>
+                    <li>
+                      <p><span>10:35</span>太平公學校參觀</p>
+                    </li>
+                    <li>
+                      <p><span>11:35</span>台灣軍司令部拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>13:05</span>總督府高等法院拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>13:20</span>台北第一中學校參觀</p>
+                    </li>
+                    <li>
+                      <p><span>14:37</span>總督府醫學校拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>15:05</span>台北御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day04">
+                <div class="dayNumber">第四天 - N月N日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>08:37</span>由台北車站出發，前往新竹</p>
+                    </li>
+                    <li>
+                      <p><span>10:31</span>抵達新竹車站</p>
+                    </li>
+                    <li>
+                      <p><span>10:40</span>新竹州廳拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>10:40</span>新竹州廳拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>11:05</span>新竹尋常高等小學校參觀</p>
+                    </li>
+                    <li>
+                      <p><span>11:28</span>由新竹車站出發，前往台中</p>
+                    </li>
+                    <li>
+                      <p><span>14:40</span>抵達台中車站</p>
+                    </li>
+                    <li>
+                      <p><span>14:50</span>台中州廰拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>15:15</span>台中第一尋常高等小學參觀</p>
+                    </li>
+                    <li>
+                      <p><span>15:45</span>陸軍台中分屯大隊拜訪</p>
+                    </li>
+                    <li>
+                      <p>
+                        <span>16:15</span>台中第一中學校及台中水道水源地參觀
+                      </p>
+                    </li>
+                    <li>
+                      <p><span>16:35</span>台中御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day05">
+                <div class="dayNumber">第五天 - 4月20日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>08:38</span>台中車站出發，前往台南</p>
+                    </li>
+                    <li>
+                      <p><span>12:33</span>抵達台南車站</p>
+                    </li>
+                    <li>
+                      <p><span>12:40</span>抵達台南御泊所</p>
+                    </li>
+                    <li>
+                      <p><span>13:20</span>台南州廳拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>13:47</span>北白川宮遺跡參訪</p>
+                    </li>
+                    <li>
+                      <p><span>14:08</span>南門尋常小學參觀</p>
+                    </li>
+                    <li>
+                      <p><span>14:30</span>台南孔廟參觀</p>
+                    </li>
+                    <li>
+                      <p><span>14:55</span>台南師範學校、台南第一公學校參觀</p>
+                    </li>
+                    <li>
+                      <p><span>15:38</span>台南第一中學校參觀。</p>
+                    </li>
+                    <li>
+                      <p><span>16:00</span>台南御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="daysItineraryListColumn02">
+              <div class="daysItinerary day06">
+                <div class="dayNumber">第六天 - 4月21日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>08:40</span>出發</p>
+                    </li>
+                    <li>
+                      <p><span>09:05</span>安平製鹽會社參觀</p>
+                    </li>
+                    <li>
+                      <p><span>10:50</span>總督府殖產局鹹水產養殖場</p>
+                    </li>
+                    <li>
+                      <p><span>11:35</span>台灣步兵第二聯隊校閱</p>
+                    </li>
+                    <li>
+                      <p><span>12:18</span>由台南車站出發前往高雄</p>
+                    </li>
+                    <li>
+                      <p><span>13:28</span>抵達高雄車站</p>
+                    </li>
+                    <li>
+                      <p><span>13:35</span>高雄御泊所休憇</p>
+                    </li>
+                    <li>
+                      <p><span>14:05</span>高雄州廳拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>14:30</span>高雄第一尋常高等小學校參觀</p>
+                    </li>
+                    <li>
+                      <p><span>14:50</span>50碼頭築港參觀</p>
+                    </li>
+                    <li>
+                      <p><span>16:00</span>高雄御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day07">
+                <div class="dayNumber">第七天 - 4月22日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>09:38</span>由高雄車站出發，前往屏東</p>
+                    </li>
+                    <li>
+                      <p><span>10:30</span>抵達屏東車站</p>
+                    </li>
+                    <li>
+                      <p><span>10:40</span>台灣製糖珠式會社阿猴工廠拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>12:09</span>抵達屏東車站，回高雄車站</p>
+                    </li>
+                    <li>
+                      <p><span>13:00</span>抵達高雄車站</p>
+                    </li>
+                    <li>
+                      <p><span>13:15</span>登高雄壽山</p>
+                    </li>
+                    <li>
+                      <p><span>16:00</span>高雄御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day08">
+                <div class="dayNumber">第八天 - 4月23日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>08:00</span>出發</p>
+                    </li>
+                    <li>
+                      <p><span>08:10</span>於高雄港搭船前往澎湖</p>
+                    </li>
+                    <li>
+                      <p><span>15:00</span>抵達馬公，拜訪馬公要港部</p>
+                    </li>
+                    <li>
+                      <p><span>17:20</span>搭船前往基隆</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day09">
+                <div class="dayNumber">第九天 - 4月24日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>08:00</span>抵達基隆港</p>
+                    </li>
+                    <li>
+                      <p><span>10:00</span>基隆登岸</p>
+                    </li>
+                    <li>
+                      <p><span>10:10</span>基隆重炮大隊檢閱</p>
+                    </li>
+                    <li>
+                      <p><span>10:44</span>抵達基隆車站，前往台北</p>
+                    </li>
+                    <li>
+                      <p><span>11:35</span>抵達台北車站</p>
+                    </li>
+                    <li>
+                      <p><span>11:45</span>於台北御泊所休憇</p>
+                    </li>
+                    <li>
+                      <p><span>13:05</span>總督府博物館參觀</p>
+                    </li>
+                    <li>
+                      <p>
+                        <span>14:15</span
+                        >參觀於「圓山運動場」舉行的全島學校聯合運動會。
+                      </p>
+                    </li>
+                    <li>
+                      <p><span>16:25</span>台北御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day10">
+                <div class="dayNumber">第十天 - 4月25日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p>
+                        <span>10:18</span
+                        >前往草山、北投溫泉參觀。午後回台北御泊所休憇。
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day11">
+                <div class="dayNumber">第十一天 - 4月26日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>09:05</span>台灣步兵第一聯隊校閱</p>
+                    </li>
+                    <li>
+                      <p><span>09:55</span>總督府專賣局拜訪</p>
+                    </li>
+                    <li>
+                      <p><span>11:25</span>台北御泊所休憇</p>
+                    </li>
+                    <li>
+                      <p><span>13:03</span>台北第一高等女學校參觀</p>
+                    </li>
+                    <li>
+                      <p><span>13:22</span>台北武德殿參觀</p>
+                    </li>
+                    <li>
+                      <p><span>14:30</span>台北第三高等女學校參觀</p>
+                    </li>
+                    <li>
+                      <p>
+                        <span>15:10</span
+                        >參觀於「圓山運動場」舉行的台灣體育協會陸上競技大會
+                      </p>
+                    </li>
+                    <li>
+                      <p><span>16:30</span>台北御泊所休憇</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="daysItinerary day12">
+                <div class="dayNumber">第十二天 - N月N日</div>
+                <div class="dayContent">
+                  <ul>
+                    <li>
+                      <p><span>09:09</span>從台北車站出發</p>
+                    </li>
+                    <li>
+                      <p><span>10:00</span>抵達基隆車站</p>
+                    </li>
+                    <li>
+                      <p><span>10:20</span>搭船返回日本內地。</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider">
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+        <img src="img/royalFlag.png" alt="" class="dividerFlag" />
+      </div>
+      <div class="section03">
+        <h1>天皇路上的台灣、日本與世界</h1>
+        <div class="decadesEvents">
+          <p class="events yearTag">1921</p>
+          <p class="events">大正因病，由裕仁親王擔任攝政宮。</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/周夢蝶" target="_blank"
+              >周夢蝶</a
+            >出生。
+          </p>
+
+          <p an class="events">
+            林獻堂等人成立【
+            <a
+              href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E6%96%87%E5%8C%96%E5%8D%94%E6%9C%83"
+              target="_blank"
+              >台灣文化協會</a
+            >】，以消除內台差別，台灣自治為訴求。
+          </p>
+          <p class="events yearTag">1922</p>
+
+          <p class="events">日本共產黨成立。</p>
+          <p class="events">
+            台灣縱貫鐵路<a
+              href="https://zh.wikipedia.org/zh-tw/海岸線_(臺鐵)"
+              target="_blank"
+              >海岸線</a
+            >全線通車。
+          </p>
+          <p class="events">鄂圖曼土耳其帝國滅亡。</p>
+          <p class="events">蘇維埃社會主義共和國聯盟成立，進入蘇聯時代。</p>
+          <p class="events yearTag">1923</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/李登輝" target="_blank"
+              >李登輝</a
+            >出生。
+          </p>
+          <p class="events mainEvent">
+            <img
+              src="img/royalFlag.png"
+              class="flagInParagraph"
+            /><br />裕仁皇太子開始12日的訪台行程，史稱【
+            <a href="https://zh.wikipedia.org/wiki/臺灣行啟" target="_blank"
+              >台灣行啟</a
+            >】。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/內田嘉吉" target="_blank"
+              >內田嘉吉</a
+            >就任第九任台灣總督。
+          </p>
+          <p class="events">蔣渭水，蔡培火因違反治安警察法，被判四個月監禁。</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/關東大地震" target="_blank"
+              >關東大地震</a
+            >：8.1級的地震，造成10萬人死亡，4萬人失踪。
+          </p>
+          <p class="events yearTag">1924</p>
+          <p class="events">
+            <img
+              src="img/book.png"
+              class="eventBookCover"
+              alt=""
+            />影響了20年代文藝發展的《
+            <a
+              href="https://www.taaze.tw/products/11100921181.html"
+              target="_blank"
+              >超現實主義宣言</a
+            >》首次發表。
+          </p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            E. M. 佛斯特的《<a
+              href="https://www.taaze.tw/products/11100824183.html"
+              target="_blank"
+              >印度之旅</a
+            >》出版上市。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/伊澤多喜男" target="_blank"
+              >伊澤多喜男</a
+            >就任第十任台灣總督。
+          </p>
+          <p class="events yearTag">1925</p>
+
+          <p class="events">
+            台灣青果株式會社成立，負責香蕉鳯梨橘子等生鮮水果出口。
+          </p>
+          <p class="events">孫中山因肝癌於北京逝世。</p>
+          <p class="events">
+            普通選舉法公佈施行：滿25歲以上的日本國男性，不論納稅額大小，都有參政權。
+          </p>
+          <p class="events">
+            治安維持法公佈施行：禁止改變國體，禁止否定私有財產制的結社及政治運動（針對共產主義）。
+          </p>
+          <p class="events">NHK開始放送。</p>
+          <p class="events yearTag">1926</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            <a
+              href="https://www.taaze.tw/rwd_searchResult.html?keyType%5B%5D=0&keyword%5B%5D=賴和"
+              target="_blank"
+              >賴和</a
+            >開始發表白話文小說。
+          </p>
+          <p class="events">花蓮到台東的鐵路全線開通儀式，於花蓮玉里舉行。</p>
+          <p class="events">磯永吉研發的新品種米”蓬萊米”正式發表問世。</p>
+          <p class="events">
+            文化書局於新竹太原路成立。由蔣渭水經營，以進口文化、思潮相關書籍為主。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/上山滿之進" target="_blank"
+              >上山滿之進</a
+            >就任第十一任台灣總督。
+          </p>
+          <p class="events">台北發生霍亂疫情。</p>
+          <p class="events mainEvent">
+            <img
+              src="img/royalFlag.png"
+              class="flagInParagraph"
+            /><br />大正病逝，裕仁繼任天皇，改年號為【昭和】。
+          </p>
+          <p class="events yearTag">1927</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            德國哲學家海德格爾出版《<a
+              href="https://www.taaze.tw/products/11100591543.html"
+              target="_blank"
+              >存在與時間</a
+            >》影響20世紀的哲學發展，如存在主義、解構主義。
+          </p>
+          <p class="events">
+            首家<a
+              href="https://zh.m.wikipedia.org/zh-tw/%E7%B4%80%E4%BC%8A%E5%9C%8B%E5%B1%8B%E6%9B%B8%E5%BA%97"
+              target="_blank"
+              >紀伊國屋書店</a
+            >於東京新宿開幕。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/中央書局" target="_blank"
+              >中央書局</a
+            >於台中市成立。由林獻堂等人所成立的台灣文化協會推動，為當時資金與規模最大的書店。
+          </p>
+          <p class="events">
+            台灣銀行最大貸款戶”鈴木商店”確定倒閉，巨大呆帳，產生經營危機。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/昭和金融恐慌"
+              >昭和金融恐慌</a
+            >：1923年關東大地震導致銀行產生龐大的呆帳，中小銀行因不景氣影響導致經營狀態惡化，社會因此產生金融危機。
+          </p>
+          <p class="events">
+            第一部有聲電影
+            <a href="https://zh.wikipedia.org/zh-tw/爵士歌手">爵士歌手</a>問世。
+          </p>
+          <p class="events yearTag">1928</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/臺北帝國大學"
+              >台北帝國大學</a
+            >成立。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/川村竹治" target="_blank"
+              >川村竹治</a
+            >就任第十二任台灣總督。
+          </p>
+          <p class="events">
+            <a
+              href="https://zh.wikipedia.org/zh-hant/%E5%BB%BA%E5%8A%9F%E7%A5%9E%E7%A4%BE"
+              target="_blank"
+              >建功神社</a
+            >（今台灣藝術教育館，位於台北植物園內）完工。為了祭祀因公殉職的招魂社，也有台灣的靖國神社之稱。
+          </p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            霧峰林家的林獻堂完成環球世界378天之後，出版《<a
+              href="https://www.taaze.tw/products/11100872327.html"
+              target="_blank"
+              >環球世界</a
+            >》。
+          </p>
+          <p class="events">
+            <img
+              src="img/book.png"
+              class="eventBookCover"
+              alt=""
+            />徐志摩代表作《<a
+              href="https://www.taaze.tw/rwd_searchResult.html?keyType%5B%5D=0&keyword%5B%5D=%E5%86%8D%E5%88%A5%E5%BA%B7%E6%A9%8B&prodKind=0&prodCatId=0&catId=0&saleDiscStart=0&saleDiscEnd=0&salePriceStart=&salePriceEnd=&publishDateStart=&publishDateEnd=&prodRank=0&addMarkFlg=0&force=0&catFocus=11&orgFocus=A&catNmFocus=010000000000&layout=A&nowPage=1&sort="
+              target="_blank"
+              >再別康橋</a
+            >》出版上市。
+          </p>
+          <p class="events yearTag">1929</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/石塚英藏" target="_blank"
+              >石塚英藏</a
+            >就任第十三任台灣總督，隔年十月發生霧社事件，因而辭職。
+          </p>
+          <p class="events">美國股市崩盤，造成全球經濟大蕭條。</p>
+          <p class="events">台北放送局完工，開始放送。</p>
+          <p class="events">
+            嘉南大圳完工。八田與一設計，為當時東洋最大的埤圳建設。完工後，嘉南平原水田成長30倍，總產量增加4倍，60萬的農民受益。
+          </p>
+          <p class="events yearTag">1930</p>
+          <p class="events">
+            【台灣地方自治聯盟】成立大會，由林獻堂召集，以促進台灣地方自治制度為目標。
+          </p>
+          <p class="events">
+            《<a
+              href="https://zh.wikipedia.org/wiki/%E4%B8%89%E5%85%AD%E4%B9%9D%E5%B0%8F%E5%A0%B1"
+              target="_blank"
+              >三六九小報</a
+            >》創刊。每年三月六月九月出刊。以白話文、台灣話文，以歷史與詩為主要內容。
+          </p>
+          <p class="events">
+            臺灣總督府癩療養所樂生院（衛福部樂生療養院）落成。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/霧社事件" target="_blank"
+              >霧社事件</a
+            >：賽德克族原住民不滿日本統治當局的統治，趁霧社小學校舉行運動會時襲擊日本人。
+          </p>
+          <!--  -->
+          <!-- 1931 -->
+          <!--  -->
+          <p class="events yearTag">1931</p>
+          <p class="events">東京台北飛機首航，途經福岡與沖繩，花了十六小時。</p>
+          <p class="events">
+            日本於東北發動九一八事變，因鐵路發生爆炸，日軍以保護自身權益為由，出兵滿州。同年11月底，佔領整個東北地區。
+          </p>
+          <p class="events yearTag">1932</p>
+          <p class="events">
+            《<a
+              href="https://zh.wikipedia.org/wiki/%E5%8D%97%E9%9F%B3_(%E9%9B%9C%E8%AA%8C)"
+              target="_blank"
+              >南音雜誌</a
+            >》創刊。以白話文出版的文學刊物。由莊垂勝，賴和等人，於台中創辦。葉石濤，稱之為「台灣文學史上最有份量的一本文藝雜誌。」
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/中川健藏" target="_blank"
+              >中川健藏</a
+            >就任第十六任的台灣總督。
+          </p>
+          <p class="events">
+            第十屆奧運於洛杉磯舉辦，張星賢代表日本參加男子400公尺中欄，獲得第四名。為第一位參加奧運的台灣人。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/南弘" target="_blank">南弘</a
+            >就任第十五任的台灣總督。日本發生【<a
+              href="https://zh.m.wikipedia.org/zh-tw/%E4%BA%94%E4%B8%80%E4%BA%94%E4%BA%8B%E4%BB%B6"
+              target="_blank"
+              >五一五事變</a
+            >】，內閣改組，南強僅就任兩個月的總督後，即辭卸總督，入閣擔任遞信大臣。
+          </p>
+          <p class="events">
+            滿州國1932年3月9日在長春成立，以清遜帝溥儀為執政，年號大同。同年9月和日本政府簽訂《日滿議定書》，日本承認了滿州國的合法性。
+          </p>
+          <p class="events yearTag">1933</p>
+
+          <p class="events">
+            古倫美亞唱片公推出台語唱片《望春風》、《雨夜花》，由純純主唱。
+          </p>
+          <p class="events">
+            台灣米在大阪掛版上市。台灣米出口量佔總產值的50%。
+          </p>
+          <p class="events">
+            希特勒受任為德國總理，納粹黨宣布其他政黨為非法組織，清除國內政治反對力量。
+          </p>
+          <p class="events">
+            國際聯盟（聯合國的前身），認定滿州是侵略戰爭，日本是侵略國家。三月底日本宣布退出國際聯盟。
+          </p>
+          <p class="events yearTag">1934</p>
+          <p class="events">日月潭水力發電所完工運行。</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/臺陽美術協會" target="_blank"
+              >台陽美術協會</a
+            >成立。廖繼春、顏水龍、陳澄波等人，於台北成立。開敫了台灣新美術運動。
+          </p>
+          <p class="events">美國大聯盟組成明星隊到日本訪問。</p>
+          <p class="events yearTag">1935</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            川端康成於報章雜誌首次發表《<a
+              href="https://www.taaze.tw/products/11100999833.html"
+              target="_blank"
+              >雪國</a
+            >》。
+          </p>
+          <p class="events">
+            台灣發生規模六級的地震，震央在台中東勢附近，上千戶房屋受損，災民達20萬。
+          </p>
+          <p class="events">
+            台灣合同鳯梨株式會社成立（戰後改為台灣鳯梨公司以台鳯牌鳯梨罐頭為名），合併眾多罐頭工
+          </p>
+          <p class="events">台北松山機場完工。</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            慶祝始政40年，舉辦為期50天的<a
+              href="https://www.taaze.tw/products/11100839103.html"
+              target="_blank"
+              >台灣博覽會</a
+            >。開幕式出席政要各界人士達三千人。參展品目達30萬件，海內外參觀人數總次達兩百七十六萬人次。
+          </p>
+          <p class="events">
+            1935年庄協議會由全面官派改制為半官派半民選，當年11月22日台灣舉行第一場選舉，
+          </p>
+          <p class="events">日本NHK開始海外廣播。</p>
+          <p class="events yearTag">1936</p>
+
+          <p class="events">台北福岡、台北大阪航空航線正式運營。</p>
+
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/小林躋造" target="_blank"
+              >小林躋造</a
+            >就任第十七任台灣總督。
+          </p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/二二六事件" target="_blank"
+              >二二六事變</a
+            >：日本近代史上最大的一次叛亂行動，數位軍官帶領士兵，對政府官員進行刺殺。
+          </p>
+          <p class="events">
+            日德簽訂【反共產國際協議】，反對蘇聯與共產國際（以共產黨、共產主義所組織的國際聯盟）。義大利於1939年加入。軸心國的雛形逐漸形成。
+          </p>
+          <p class="events yearTag">1937</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            史坦貝克《<a
+              href="https://www.taaze.tw/products/11100939094.html"
+              target="_blank"
+              >人鼠之間</a
+            >》出版上市。
+          </p>
+          <p class="events">盧溝橋事件：中日戰爭全面開打。</p>
+          <p class="events yearTag">1938</p>
+          <p class="events">
+            台灣總督為了推廣皇民化，公佈【一庄街一寺廟】方針。
+          </p>
+          <p class="events">
+            台北圓山兒童樂園開幕，經歷多次的增修興建。1998年該區因發現史前時期遺跡被列為國定古蹟。兒童樂園於2008年搬至士林，該區將改為史蹟公園與博物展覽館。
+          </p>
+          <p class="events yearTag">1939</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/漫威漫畫">漫威漫畫</a
+            >創刊號上市。
+          </p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            雷蒙．錢德勒以私家偵探馬羅做為主要的小說《<a
+              href="https://www.taaze.tw/products/11100210759.html"
+              target="_blank"
+              >大眠</a
+            >》上市。
+          </p>
+          <p class="events">
+            東沙島，太平島納入高雄州。東沙島附近是全世界船難最多的地方之一。
+          </p>
+          <p class="events">希特勒入侵波蘭，引發第二次世界大戰。</p>
+          <p class="events yearTag">1940</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/wiki/長谷川清" target="_blank"
+              >長谷川清</a
+            >任第十八任台灣總督
+          </p>
+          <p class="events">東京原訂舉辦第十二屆奧運，因第二次世界大戰停辦。</p>
+          <p class="events">
+            日德義三國聯盟。<br /><span class="spanTest"
+              ><img src="img/book.png" class="testbookcover" alt=""
+            /></span>
+          </p>
+          <p class="events yearTag">1941</p>
+          <p class="events">
+            嘉義發生規模7.1級大地震。雲嘉南地區上萬戶的房子倒塌，約一千人傷亡。
+          </p>
+          <p class="events">日本偷襲珍珠港，太平洋戰爭爆發。</p>
+          <p class="events yearTag">1942</p>
+          <p class="events">
+            【<a
+              href="https://zh.wikipedia.org/zh-tw/曼哈頓計劃"
+              target="_blank"
+              >曼哈頓計劃</a
+            >】啟動，由美國主導，研發核能武器。自此各國展開核武器競爭。但美國至今仍是唯一發動核彈攻擊的國家。
+          </p>
+          <p class="events yearTag">1943</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />
+            《<a
+              href="https://www.taaze.tw/products/11100617114.html"
+              target="_blank"
+              >存在與虛無</a
+            >》出版上市。沙特的第一本著作，也是存在主義思潮最重要的一本作品。
+          </p>
+          <p class="events">美軍對新竹航空區域展開轟炸。</p>
+          <p class="events yearTag">1944</p>
+          <p class="events">美軍對台灣全島展開轟炸。</p>
+          <p class="events">
+            <a href="https://zh.wikipedia.org/zh-tw/安藤利吉" target="_blank"
+              >安藤利吉</a
+            >任第十九任台灣總督。日本無條件投降後，安藤以戰犯的身份遭到逮捕，押送上海拘禁。1946年4月29日於窂裹服毒自殺身亡。
+          </p>
+          <p class="events yearTag">1945</p>
+
+          <p class="events">美軍對台北、台中、嘉義展開轟炸。</p>
+          <p class="events">
+            <img src="img/book.png" class="eventBookCover" alt="" />《<a
+              href="https://www.taaze.tw/products/11100199714.html"
+              target="_blank"
+              >亞細亞的孤兒</a
+            >》完稿，吳濁流筆下描述台灣人在台灣受到日本殖民者的侵壓，到中國後又被當成日本人間諜的故事。
+          </p>
+          <p class="events">
+            美軍出動120架轟炸機，對台北展開大規模轟炸。總督府、總督官邸、台灣銀行，建功神社等，都遭到毀損。
+          </p>
+          <p class="events">
+            美軍於廣島、長崎投下原子彈，造成25萬人死亡。日本宣布無條件投降。
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('scroll', function (e) {
+        const target = document.querySelector('.scrollImg');
+
+        var scrolled = window.pageYOffset;
+        var rate = scrolled * 0.5;
+        target.style.transform = 'translate3d(0px, ' + rate + 'px, 0px)';
+      });
+
+      window.addEventListener('scroll', function (e) {
+        const target = document.querySelector('.scrollImgLeft');
+
+        var scrolled = window.pageYOffset;
+        var rate = scrolled * 10;
+        target.style.transform = 'translate3d( -' + rate + 'px, 0px, 0px)';
+      });
+
+      //
+      // First we select the element we want to target
+      const target = document.querySelector('.animated_hand');
+
+      function handleIntersection(entries) {
+        entries.map((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(function () {
+              target.style.transform = 'translateY(-25%)';
+              target.style.transition = '5s ease-out';
+            }, 5000);
+          } else {
+            target.style.transform = 'translateY(0)';
+            target.style.transition = '1s ease-out';
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(handleIntersection);
+
+      observer.observe(target);
+    </script>
+  </body>
+</html>
